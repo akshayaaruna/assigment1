@@ -1,0 +1,28 @@
+
+CREATE TABLE vendor(
+    vendor_id NUMBER,
+    vendor_name VARCHAR2(255) NOT NULL,
+    address VARCHAR2(255) NOT NULL
+);
+
+ALTER TABLE vendor
+ADD CONSTRAINT pk_vendor PRIMARY KEY (vendor_id);
+
+INSERT INTO vendor (vendor_id,vendor_name,address,AGE)VALUES(01,'MOHAMMED','THANJAVUR',25);
+INSERT INTO vendor(vendor_id,vendor_name,address,AGE)VALUES(02,'ABDUL','TRICHY',24);
+INSERT INTO vendor (vendor_id,vendor_name,address,AGE)VALUES(03,'ASIFA','CHENNAI',23);
+INSERT INTO vendor(vendor_id,vendor_name,address,AGE)VALUES(04,'FIROUS','BANGALORE',22);
+INSERT INTO vendor (vendor_id,vendor_name,address,AGE)VALUES(05,'FAHIMA','KUMBAKONAM',18);
+INSERT INTO vendor(vendor_id,vendor_name,address,AGE)VALUES(06,'AKSHAYA','KUTRALAM',24);
+
+
+SELECT*FROM vendor
+
+ALTER TABLE vendor
+DROP PRIMARY KEY;
+
+ALTER TABLE vendor
+ADD CHECK (Age>=18);
+
+ALTER TABLE vendor
+ADD AGE int;
